@@ -1,0 +1,196 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background-color: #d9534f;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	user-select: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+h1 {
+	font-weight: bolder;
+	font-size: 2rem;
+}
+
+i {
+	transition: all 0.3s;
+}
+
+i:hover {
+	color: #d9d9d9;
+}
+
+#root {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+#title {
+	text-align: center;
+	flex: 1 0 100%;
+	order: 0;
+}
+
+#controller {
+	text-align: center;
+	flex: 0 0 75%;
+	display: flex;
+	width: 80%;
+	order: 2;
+}
+
+#controller h2 {
+	margin-bottom: 15px;
+}
+
+#controller p {
+	margin-top: 0;
+	font-size: 1.6rem;
+}
+
+#break-length {
+	width: 50%;
+	display: inline-block;
+	font-size: 49px
+}
+
+#session-length {
+	width: 50%;
+	display: inline-block;
+	font-size: 49px
+}
+
+#session {
+	width: 50%;
+	display: inline-block;
+}
+
+#display {
+	text-align: center;
+	flex: 1 0 100%;
+	padding: 40px 0;
+	order: 1;
+}
+
+#timer-div {
+	width: 100%;
+}
+
+#timer-label {
+	margin: 0;
+}
+
+#time-left {
+	font-size: 5.5rem;
+	font-weight: 600;
+	width: 100%;
+	text-emphasis: 1shadow;
+}
+
+#time-left span {
+	margin: 0;
+}
+
+#controls {
+	flex: 0 0 30%;
+	text-align: center;
+	font-size: 1.6rem;
+	display: flex;
+	justify-content: space-evenly;
+	padding-top: 15px;
+	padding-bottom: 0;
+	height: 50px;
+	border: 2px solid white;
+}
+
+#controls span i {
+	font-size: 2rem;
+}
+
+#start_stop {
+	position: relative;
+	/* the button's background color */
+	background: #fff;
+	border: none;
+	outline: none;
+	height: 5em;
+	width: 5em;
+	font-size: 2em;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, .3);
+	cursor: pointer;
+	/* the button's a circle */
+	-moz-border-radius: 5em;
+	-webkit-border-radius: 5em;
+	border-radius: 5em;
+}
+
+#start_stop:focus {
+	outline: none;
+}
+
+
+/* the button's top layer: size, shape, appearance */
+
+#start_stop:before {
+	content: "";
+	position: absolute;
+	top: 1.5em;
+	/* for visual centering */
+	left: 1.67em;
+	height: 0;
+	border-style: solid;
+	border-width: 1em 0 1em 2em;
+	/* create shape with color */
+	border-color: transparent transparent transparent #e52d27;
+	transition: .218s ease;
+}
+
+#start_stop:hover:before {
+	height: 2em;
+	border-width: 0 0 0 2em;
+}
+
+
+/* the button's mouseover/click/hover layer: size, shape, appearance */
+
+#start_stop:after {
+	content: "";
+	position: absolute;
+	background: inherit;
+	width: 0;
+	height: 2em;
+	top: 1.5em;
+	left: 2.42em;
+	transition: .218s ease;
+}
+
+#start_stop:hover:after {
+	width: .5em;
+}
+
+.arrow {
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+}
+
+.up {
+	transform: rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+}
+
+.down {
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
